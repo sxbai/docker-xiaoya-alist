@@ -20,7 +20,7 @@ RUN /bin/sh -c apk add
 
 ENV PUID=0 PGID=0 UMASK=022
 
-EXPOSE map[5244/tcp:{}]
+EXPOSE map[5244/tcp:5244]
 
 ENTRYPOINT ["/entrypoint.sh"]
 
@@ -56,7 +56,7 @@ WORKDIR /opt/alist/
 
 VOLUME [/opt/alist/data/]
 
-EXPOSE map[5244/tcp:{}]
+EXPOSE map[5244/tcp:5244]
 
 ENTRYPOINT ["/entrypoint.sh"]
 
